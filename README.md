@@ -17,14 +17,31 @@ To further remove the confounding bias, a dynamic inverse probability of treatme
 
 
 
-
 # Data preprocessing
-### Synthetic dataset
-Simulate the all covariates, treatments and outcomes
-```
-cd preprocessing
-python synthetic_mimic.py
-```
+
+## List of used variables
+
+Static variables :
+Age,Gender,Weight,Readmission to intensive, care, Elixhauser score (premorbid status)
+
+
+Time-varying variables:
+Modified SOFA, SIRS, Glasgow coma scale, Heart rate, systolic, mean and diastolic, 
+blood pressure, shock index, Respiratory rate, SpO2, Temperature 
+Potassium, sodium, chloride, Glucose, BUN, creatinine, Magnesium, calcium, 
+ionized calcium, carbon dioxide, SGOT, SGPT, total bilirubin, albumin, Hemoglobin, 
+White blood cells count, platelets, count, PTT, PT, INR, pH, PaO2, PaCO2, base excess, 
+bicarbonate, lactate, PaO2/FiO2 ratio, Mechanical ventilation, FiO2, 
+IV fluid intake over 4h, vasopressor over 4h, Urine output over 4h, 
+Cumulated fluid balance since admission (includes preadmission data when available)
+
+Treatment actions:
+positive end-expiratory pressure (PEEP), fraction of inspired oxygen (FiO2), 
+ideal body weight-adjusted tidal volume (Vt) 
+
+Outcome: Hospital mortality, 90-day mortality 
+
+
 
 ### MIMIC-III dataset
 ```
@@ -35,6 +52,13 @@ python mech_dataset.py
 python find_patients_wth_mechvent.py
 ```
 
+
+### Synthetic dataset
+Simulate the all covariates, treatments and outcomes
+```
+cd preprocessing
+python synthetic_mimic.py
+```
 
 # Train and test DAC
 ### Split dataset
@@ -82,3 +106,4 @@ python main.py
 - Mortality-expected-return curve computed by the learned policies
 
 <img src="src/mimic.q_value.png" width=30%> <img src="src/ast.q_value.png" width=30%>
+
