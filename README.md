@@ -44,12 +44,25 @@ Outcome: Hospital mortality, 90-day mortality
 
 
 ### MIMIC-III dataset
+
+Setup MIMIC-III database (https://github.com/MIT-LCP/mimic-code)
+
 ```
 cd preprocessing
 python extract_mimic_data.py
 python mimic3_dataset.py
 python mech_dataset.py
 python find_patients_wth_mechvent.py
+```
+
+### AmsterdamUMCdb dataset
+Setup AmsterdamUMCdb database (https://github.com/AmsterdamUMC/AmsterdamUMCdb)
+
+```
+cd preprocessing
+extract_features.ipynb  
+mechanical_ventilation.ipynb
+generate_mechvent_variables.py
 ```
 
 
