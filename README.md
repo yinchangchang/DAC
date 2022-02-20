@@ -59,20 +59,26 @@ python main.py
 # Visualization of results
 
 - Visualization of the action distribution in the 3-dimensional action space on MIMIC-III dataset.
+
 <img src="src/MIMIC-III_PEEP_action_distribution.png" width=30%> <img src="src/MIMIC-III_TidalVolume_action_distribution.png" width=30%> <img src="src/MIMIC-III_FiO2_action_distribution.png" width=30%>
 
 
 - Visualization of the action distribution in the 3-dimensional action space on AmsterdamUMCdb dataset.
+
 <img src="src/AmsterdamUMCdb_PEEP_action_distribution.png" width=30%> <img src="src/AmsterdamUMCdb_TidalVolume_action_distribution.png" width=30%> <img src="src/AmsterdamUMCdb_FiO2_action_distribution.png" width=30%>
 
 - The relations between mortality rates and mechanical ventilation setting difference (recommended setting - actual setting) on MIMIC-III dataset.
+
 <img src="src/mimic.FiO2.diff.png" width=30%> <img src="src/mimic.PEEP.diff.png" width=30%> <img src="src/mimic.TidalVolume.diff.png" width=30%>
 
 - The relations between mortality rates and mechanical ventilation setting difference (recommended setting - actual setting) on AmsterdamUMCdb dataset.
+
 <img src="src/ast.FiO2.diff.png" width=30%> <img src="src/ast.PEEP.diff.png" width=30%> <img src="src/ast.TidalVolume.diff.png" width=30%>
 
 - The positive correlations between estimated mortality rate and predicted mortality probability on MIMIC-III and AmsterdamUMCdb datasets. 
+
 <img src="src/mimic.predicted_mortality.png" width=30%> <img src="src/ast.predicted_mortality.png" width=30%>
 
 - Mortality-expected-return curve computed by the learned policies
+
 <img src="src/mimic.q_value.png" width=30%> <img src="src/ast.q_value.png" width=30%>
